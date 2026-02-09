@@ -41,15 +41,16 @@ const MortgagePrograms = () => {
 
         <div className="grid lg:grid-cols-2 gap-12 items-start mt-12">
           <div className="rounded-xl overflow-hidden shadow-xl border border-border">
-            <div className="aspect-video bg-muted flex items-center justify-center">
-              <div className="text-center text-muted-foreground p-8">
-                <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-cta/10 flex items-center justify-center">
-                  <svg className="w-10 h-10 text-cta" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M8 5v14l11-7z" />
-                  </svg>
-                </div>
-                <p className="text-base font-medium">YouTube Video Placeholder</p>
-              </div>
+            <div className="aspect-video">
+              <iframe
+                width="100%"
+                height="100%"
+                src="https://www.youtube.com/embed/KxKXJrWf9hs"
+                title="Mortgage Programs"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
             </div>
           </div>
 
