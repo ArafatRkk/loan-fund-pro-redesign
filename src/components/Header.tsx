@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import ContactFormDialog from "@/components/ContactFormDialog";
+import logo from "@/assets/logo.webp";
 
 const navItems = [
   { label: "About Us", href: "#about" },
@@ -17,13 +18,8 @@ const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-primary/95 backdrop-blur-md shadow-lg">
       <div className="container mx-auto px-4 flex items-center justify-between h-16 md:h-20">
-        <a href="#" className="flex items-center gap-2">
-          <div className="w-10 h-10 rounded-full bg-cta flex items-center justify-center">
-            <span className="text-cta-foreground font-bold text-lg">PM</span>
-          </div>
-          <span className="text-primary-foreground font-serif text-xl font-bold">
-            Preferred<span className="text-cta"> Mortgage Inc.</span>
-          </span>
+        <a href="#" className="flex items-center">
+          <img src={logo} alt="Preferred Mortgage Inc." className="h-12 md:h-14 w-auto" />
         </a>
 
         <nav className="hidden lg:flex items-center gap-1">
