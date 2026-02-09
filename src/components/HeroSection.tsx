@@ -1,14 +1,21 @@
 import { Button } from "@/components/ui/button";
+import heroVideo from "@/assets/hero-video.mp4";
 import heroBg from "@/assets/hero-bg.jpg";
 import businessCard from "@/assets/business-card.png";
 
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
-      <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url(${heroBg})` }}
-      />
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        poster={heroBg}
+        className="absolute inset-0 w-full h-full object-cover"
+      >
+        <source src={heroVideo} type="video/mp4" />
+      </video>
       <div className="absolute inset-0 bg-hero-overlay" />
 
       <div className="container mx-auto px-4 relative z-10 pt-20">
