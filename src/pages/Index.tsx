@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import PersonalizedSection from "@/components/PersonalizedSection";
@@ -9,6 +10,13 @@ import MortgageCalculator from "@/components/MortgageCalculator";
 import Footer from "@/components/Footer";
 
 const Index = () => {
+  useEffect(() => {
+    document.documentElement.style.scrollBehavior = "smooth";
+    return () => {
+      document.documentElement.style.scrollBehavior = "";
+    };
+  }, []);
+
   return (
     <div className="min-h-screen">
       <Header />

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
+import { ScrollReveal } from "@/hooks/useScrollAnimation";
 
 const faqs = [
   {
@@ -50,36 +51,43 @@ const FAQSection = () => {
   return (
     <section className="py-20 bg-background" id="faq">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-14">
-          <span className="text-cta font-semibold text-sm uppercase tracking-widest">FAQ</span>
-          <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground mt-3">
-            Frequently Asked Questions
-          </h2>
-        </div>
+        <ScrollReveal>
+          <div className="text-center mb-14">
+            <span className="text-cta font-semibold text-sm uppercase tracking-widest">FAQ</span>
+            <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground mt-3">
+              Frequently Asked Questions
+            </h2>
+          </div>
+        </ScrollReveal>
 
         <div className="max-w-3xl mx-auto space-y-3">
           {faqs.map((faq, index) => (
-            <div
-              key={index}
-              className="border border-border rounded-lg overflow-hidden transition-all duration-200"
-            >
-              <button
-                className="w-full flex items-center justify-between p-5 text-left hover:bg-muted/50 transition-colors"
-                onClick={() => setOpenIndex(openIndex === index ? null : index)}
-              >
-                <span className="font-semibold text-foreground pr-4">{faq.question}</span>
-                <ChevronDown
-                  className={`w-5 h-5 text-cta flex-shrink-0 transition-transform duration-200 ${
-                    openIndex === index ? "rotate-180" : ""
-                  }`}
-                />
-              </button>
-              {openIndex === index && (
-                <div className="px-5 pb-5 text-muted-foreground leading-relaxed animate-fade-in">
-                  {faq.answer}
+            <ScrollReveal key={index} delay={index * 0.05}>
+              <div className="border border-border rounded-lg overflow-hidden transition-all duration-200">
+                <button
+                  className="w-full flex items-center justify-between p-5 text-left hover:bg-muted/50 transition-colors"
+                  onClick={() => setOpenIndex(openIndex === index ? null : index)}
+                >
+                  <span className="font-semibold text-foreground pr-4">{faq.question}</span>
+                  <ChevronDown
+                    className={`w-5 h-5 text-cta flex-shrink-0 transition-transform duration-200 ${
+                      openIndex === index ? "rotate-180" : ""
+                    }`}
+                  />
+                </button>
+                <div
+                  className="overflow-hidden transition-all duration-300 ease-in-out"
+                  style={{
+                    maxHeight: openIndex === index ? "500px" : "0",
+                    opacity: openIndex === index ? 1 : 0,
+                  }}
+                >
+                  <div className="px-5 pb-5 text-muted-foreground leading-relaxed">
+                    {faq.answer}
+                  </div>
                 </div>
-              )}
-            </div>
+              </div>
+            </ScrollReveal>
           ))}
         </div>
       </div>

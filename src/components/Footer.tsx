@@ -39,7 +39,7 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold text-lg mb-4">Loan Programs</h4>
             <ul className="space-y-3">
-              {["Conventional Loans", "FHA Loans", "VA Loans", "Jumbo Loans", "Refinance"].map((item) => (
+              {["Conventional Loans", "FHA Loans", "VA Loans", "USDA Loans"].map((item) => (
                 <li key={item}>
                   <a href="#programs" className="text-primary-foreground/60 hover:text-cta text-sm transition-colors">
                     {item}
