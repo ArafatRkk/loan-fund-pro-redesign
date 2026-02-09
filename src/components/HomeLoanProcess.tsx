@@ -30,15 +30,16 @@ const HomeLoanProcess = () => {
 
         <div className="max-w-3xl mx-auto mb-16">
           <div className="rounded-xl overflow-hidden shadow-xl">
-            <div className="aspect-video bg-primary/50 flex items-center justify-center">
-              <div className="text-center text-primary-foreground/60 p-8">
-                <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-cta/20 flex items-center justify-center">
-                  <svg className="w-10 h-10 text-cta" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M8 5v14l11-7z" />
-                  </svg>
-                </div>
-                <p className="text-base font-medium">YouTube Video Placeholder</p>
-              </div>
+            <div className="aspect-video">
+              <iframe
+                width="100%"
+                height="100%"
+                src="https://www.youtube.com/embed/ZARsJuwC0LU"
+                title="Home Loan Process"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
             </div>
           </div>
         </div>

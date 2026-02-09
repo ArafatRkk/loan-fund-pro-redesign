@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import heroBg from "@/assets/hero-bg.jpg";
+import businessCard from "@/assets/business-card.png";
 
 const HeroSection = () => {
   return (
@@ -32,29 +33,25 @@ const HeroSection = () => {
 
           <div className="flex flex-col gap-6 animate-fade-in" style={{ animationDelay: "0.3s" }}>
             <div className="rounded-xl overflow-hidden shadow-2xl border border-primary-foreground/10">
-              <div className="aspect-video bg-primary/50 flex items-center justify-center">
-                <div className="text-center text-primary-foreground/60 p-8">
-                  <div className="w-16 h-16 mx-auto mb-3 rounded-full bg-cta/20 flex items-center justify-center">
-                    <svg className="w-8 h-8 text-cta" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M8 5v14l11-7z" />
-                    </svg>
-                  </div>
-                  <p className="text-sm">YouTube Video Placeholder</p>
-                </div>
+              <div className="aspect-video">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/76wDnOUDPYE"
+                  title="YouTube video"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
               </div>
             </div>
 
             <div className="rounded-xl overflow-hidden shadow-2xl border border-primary-foreground/10">
-              <div className="aspect-[3/2] bg-primary/50 flex items-center justify-center">
-                <div className="text-center text-primary-foreground/60 p-8">
-                  <div className="w-16 h-16 mx-auto mb-3 rounded-full bg-teal/20 flex items-center justify-center">
-                    <svg className="w-8 h-8 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
-                    </svg>
-                  </div>
-                  <p className="text-sm">Business Card Photo Placeholder</p>
-                </div>
-              </div>
+              <img
+                src={businessCard}
+                alt="Sam Mahshi - Certified Mortgage Advisor Business Card"
+                className="w-full h-auto"
+              />
             </div>
           </div>
         </div>
