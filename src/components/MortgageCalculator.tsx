@@ -35,14 +35,14 @@ const MortgageCalculator = () => {
         (Math.pow(1 + monthlyRate, numPayments) - 1);
     }
 
-    // PMI calculation (PMI applies when down payment < 20%)
-    const needsPMI = downPayment / homeValue < 0.2;
-    const monthlyPMI = needsPMI ? (loanAmount * (pmiRate / 100)) / 12 : 0;
+    // PMI calculation (always based on PMI rate input)
+    const monthlyPMI = pmiRate > 0 ? (loanAmount * (pmiRate / 100)) / 12 : 0;
+    const needsPMI = pmiRate > 0;
 
     // Calculate when PMI ends (when equity reaches 20%)
     let pmiPayments = 0;
     let totalPMIPaid = 0;
-    if (needsPMI) {
+    if (needsPMI && downPayment / homeValue < 0.2) {
       let balance = loanAmount;
       while (balance > homeValue * 0.8 && pmiPayments < numPayments) {
         const interestPayment = balance * monthlyRate;
@@ -51,6 +51,10 @@ const MortgageCalculator = () => {
         pmiPayments++;
         totalPMIPaid += monthlyPMI;
       }
+    } else if (needsPMI) {
+      // PMI applies for full term if user set a rate
+      pmiPayments = numPayments;
+      totalPMIPaid = monthlyPMI * numPayments;
     }
 
     const totalPaymentWithPMI = monthlyPrincipalInterest + monthlyTax + monthlyInsurance + monthlyHOA + monthlyPMI;
