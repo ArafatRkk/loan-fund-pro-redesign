@@ -5,19 +5,19 @@ const reviews = [
   {
     name: "Sarah Johnson",
     role: "First-Time Homebuyer",
-    text: "LoanFunder Pro made my first home purchase an amazing experience. They walked me through every step and found me the best rate possible. I couldn't be happier!",
+    text: "Mortgage Broker made my first home purchase an amazing experience. They walked me through every step and found me the best rate possible. I couldn't be happier!",
     rating: 5,
   },
   {
     name: "Michael Chen",
     role: "Refinance Client",
-    text: "I refinanced my mortgage with LoanFunder Pro and saved hundreds per month. The process was seamless and their team was incredibly responsive and professional.",
+    text: "I refinanced my mortgage with Mortgage Broker and saved hundreds per month. The process was seamless and their team was incredibly responsive and professional.",
     rating: 5,
   },
   {
     name: "Emily Rodriguez",
     role: "Investment Property Owner",
-    text: "Working with LoanFunder Pro for my investment property loan was the best decision. Their expertise in various loan programs is outstanding. Highly recommend!",
+    text: "Working with Mortgage Broker for my investment property loan was the best decision. Their expertise in various loan programs is outstanding. Highly recommend!",
     rating: 5,
   },
 ];

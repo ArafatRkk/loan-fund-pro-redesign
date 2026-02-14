@@ -1,5 +1,6 @@
 import { FileText, Search, CheckCircle } from "lucide-react";
 import { ScrollReveal } from "@/hooks/useScrollAnimation";
+import VideoPlaceholder from "@/components/VideoPlaceholder";
 
 const steps = [
   {
@@ -35,16 +36,7 @@ const HomeLoanProcess = () => {
           <div className="max-w-3xl mx-auto mb-16">
             <div className="rounded-xl overflow-hidden shadow-xl">
               <div className="aspect-video">
-                <iframe
-                  width="100%"
-                  height="100%"
-                  src="https://www.youtube.com/embed/ZARsJuwC0LU"
-                  title="Home Loan Process"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  loading="lazy"
-                />
+                <VideoPlaceholder />
               </div>
             </div>
           </div>

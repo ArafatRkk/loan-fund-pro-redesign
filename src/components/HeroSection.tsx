@@ -1,3 +1,4 @@
+import VideoPlaceholder from "@/components/VideoPlaceholder";
 import { Button } from "@/components/ui/button";
 import heroVideo from "@/assets/hero-video.mp4";
 import heroBg from "@/assets/hero-bg.jpg";
@@ -41,15 +42,7 @@ const HeroSection = () => {
           <div className="flex flex-col gap-6 animate-fade-in" style={{ animationDelay: "0.3s" }}>
             <div className="rounded-xl overflow-hidden shadow-2xl border border-primary-foreground/10">
               <div className="aspect-video">
-                <iframe
-                  width="100%"
-                  height="100%"
-                  src="https://www.youtube.com/embed/76wDnOUDPYE"
-                  title="YouTube video"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                />
+                <VideoPlaceholder />
               </div>
             </div>
 

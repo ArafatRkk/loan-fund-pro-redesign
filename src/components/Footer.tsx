@@ -8,14 +8,14 @@ const Footer = () => {
           <div>
             <div className="flex items-center gap-2 mb-4">
               <div className="w-10 h-10 rounded-full bg-cta flex items-center justify-center">
-                <span className="text-cta-foreground font-bold text-lg">LF</span>
+                <span className="text-cta-foreground font-bold text-lg">MB</span>
               </div>
               <span className="font-serif text-xl font-bold">
-                LoanFunder<span className="text-cta">Pro</span>
+                Mortgage<span className="text-cta">Broker</span>
               </span>
             </div>
             <p className="text-primary-foreground/60 text-sm leading-relaxed mb-6">
-              Your trusted local mortgage broker in California. We provide personalized mortgage 
+              Your trusted local mortgage broker in California. We provide personalized mortgage
               solutions to help you achieve your homeownership dreams.
             </p>
             <p className="text-primary-foreground/40 text-xs">
@@ -56,9 +56,9 @@ const Footer = () => {
                 <Phone className="w-4 h-4 flex-shrink-0" />
                 (123) 456-7890
               </a>
-              <a href="mailto:info@loanfunderpro.com" className="flex items-center gap-3 text-primary-foreground/60 hover:text-cta text-sm transition-colors">
+              <a href="mailto:info@mortgagebroker.com" className="flex items-center gap-3 text-primary-foreground/60 hover:text-cta text-sm transition-colors">
                 <Mail className="w-4 h-4 flex-shrink-0" />
-                info@loanfunderpro.com
+                info@mortgagebroker.com
               </a>
               <div className="flex items-start gap-3 text-primary-foreground/60 text-sm">
                 <MapPin className="w-4 h-4 flex-shrink-0 mt-0.5" />
@@ -72,7 +72,7 @@ const Footer = () => {
       <div className="border-t border-primary-foreground/10">
         <div className="container mx-auto px-4 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-primary-foreground/40 text-sm">
-            © 2025 LoanFunder Pro. All rights reserved.
+            © 2025 Mortgage Broker. All rights reserved.
           </p>
           <div className="flex gap-6">
             <a href="#" className="text-primary-foreground/40 hover:text-cta text-sm transition-colors">
